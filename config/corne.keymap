@@ -53,7 +53,8 @@
         num_with_shift_layer: num_with_shift_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&lm 1 LSHIFT>;
+            bindings = <&macro_press>, <&lm 1 SPACE>;
+
             label = "NUM_WITH_SHIFT_LAYER";
         };
     };
@@ -64,8 +65,6 @@
             label = "SPACE_OR_NUM_LAYER_WITH_SHIFT";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&lm 1 LSHIFT>;
-
-            tapping-term-ms = <100>;
         };
 
         space_or_num_shift: space_or_num_shift {
@@ -75,7 +74,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <100>;
-            quick-tap-ms = <25>;
         };
     };
 
