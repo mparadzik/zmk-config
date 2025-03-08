@@ -65,22 +65,13 @@
     };
 
     behaviors {
-        space_or_num_layer_with_shift: space_or_num_layer_with_shift {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SPACE_OR_NUM_LAYER_WITH_SHIFT";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&lm 1 LSHIFT>;
-
-            tapping-term-ms = <50>;
-        };
-
-        new_behavior: new_behavior {
+        shift_num_layer_when_help: shift_num_layer_when_help {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
+            label = "SHIFT_NUM_LAYER_WHEN_HELP";
             bindings = <&shift_num_layer>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -95,10 +86,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T                    &kp Y    &kp U  &kp I         &kp O    &kp P     &kp BSPC
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G                    &kp H    &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B                    &kp N    &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                          &kp LGUI  &mo 1  &new_behavior 0 SPACE    &kp RET  &mo 2  &kp LEFT_ALT
+&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T                                 &kp Y    &kp U  &kp I         &kp O    &kp P     &kp BSPC
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G                                 &kp H    &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B                                 &kp N    &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                          &kp LGUI  &mo 1  &shift_num_layer_when_help 0 SPACE    &kp RET  &mo 2  &kp LEFT_ALT
             >;
         };
 
