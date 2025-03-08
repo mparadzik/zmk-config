@@ -49,30 +49,16 @@
                 <&macro_release>,
                 <&mo MACRO_PLACEHOLDER>;
         };
-
-        num_with_shift: num_with_shift {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&lm 1 LSHIFT>;
-            label = "NUM_WITH_SHIFT";
-        };
     };
 
     behaviors {
-        num_with_shift_layet: num_with_shift_layet {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NUM_WITH_SHIFT_LAYET";
-            bindings = <&num_with_shift>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        new_behavior: new_behavior {
+        space_or_num_layer_with_shift: space_or_num_layer_with_shift {
             compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
+            label = "SPACE_OR_NUM_LAYER_WITH_SHIFT";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&lm 1 LSHIFT>;
+
+            tapping-term-ms = <100>;
         };
     };
 
@@ -87,10 +73,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T                            &kp Y    &kp U  &kp I          &kp O    &kp P     &kp BSPC
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G                            &kp H    &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B                            &kp N    &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp ESC
-                          &kp LGUI  &mo 1  &num_with_shift_layet 1 SPACE    &kp RET  &mo 2  &new_behavior
+&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T                             &kp Y    &kp U  &kp I         &kp O    &kp P     &kp BSPC
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G                             &kp H    &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B                             &kp N    &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                          &kp LGUI  &mo 1  &space_or_num_layer_with_shift    &kp RET  &mo 2  &kp LEFT_ALT
             >;
         };
 
