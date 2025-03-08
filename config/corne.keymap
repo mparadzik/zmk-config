@@ -49,14 +49,6 @@
                 <&macro_release>,
                 <&mo MACRO_PLACEHOLDER>;
         };
-
-        num_with_shift_layer: num_with_shift_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press>, <&lm 1 SPACE>;
-
-            label = "NUM_WITH_SHIFT_LAYER";
-        };
     };
 
     behaviors {
@@ -65,15 +57,8 @@
             label = "SPACE_OR_NUM_LAYER_WITH_SHIFT";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&lm 1 LSHIFT>;
-        };
 
-        space_or_num_shift: space_or_num_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_OR_NUM_SHIFT";
-            bindings = <&num_with_shift_layer>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <300>;
         };
     };
 
@@ -88,10 +73,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T                             &kp Y    &kp U  &kp I                        &kp O    &kp P     &kp BSPC
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G                             &kp H    &kp J  &kp K                        &kp L    &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B                             &kp N    &kp M  &kp COMMA                    &kp DOT  &kp FSLH  &kp ESC
-                          &kp LGUI  &mo 1  &space_or_num_layer_with_shift    &kp RET  &mo 2  &space_or_num_shift 1 SPACE
+&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T                             &kp Y    &kp U  &kp I         &kp O    &kp P     &kp BSPC
+&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G                             &kp H    &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B                             &kp N    &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                          &kp LGUI  &mo 1  &space_or_num_layer_with_shift    &kp RET  &mo 2  &kp LEFT_ALT
             >;
         };
 
