@@ -62,9 +62,9 @@
         num_with_shift_layet: num_with_shift_layet {
             compatible = "zmk,behavior-hold-tap";
             label = "NUM_WITH_SHIFT_LAYET";
-            bindings = <&lm 1 LSHIFT>, <&kp SPACE>;
+            bindings = <&num_with_shift>, <&kp>;
 
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             tapping-term-ms = <50>;
         };
     };
@@ -83,7 +83,7 @@
 &kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T                            &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G                            &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B                            &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                          &kp LGUI  &mo 1  &num_with_shift_layet            &kp RET  &mo 2  &kp LALT
+                          &kp LGUI  &mo 1  &num_with_shift_layet 1 SPACE    &kp RET  &mo 2  &kp LALT
             >;
         };
 
