@@ -72,17 +72,8 @@
             bindings = <&shift_num_layer>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <240>;
-        };
-
-        num_or_mouse: num_or_mouse {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NUM_OR_MOUSE";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 4>;
-
-            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
         };
 
         enter_or_mouse: enter_or_mouse {
@@ -92,17 +83,18 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
 
-        hold_or_tap: hold_or_tap {
+        hold_or_tap_home_row: hold_or_tap_home_row {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_OR_TAP";
+            label = "HOLD_OR_TAP_HOME_ROW";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <0>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -117,10 +109,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W                 &kp E                        &kp R                    &kp T                                 &kp Y                    &kp U                 &kp I                        &kp O                    &kp P     &kp BSPC
-&kp LSHIFT  &kp A  &hold_or_tap LCTRL S  &hold_or_tap LEFT_COMMAND D  &hold_or_tap LEFT_ALT F  &kp G                                 &kp H                    &hold_or_tap LCTRL J  &hold_or_tap LEFT_COMMAND K  &hold_or_tap LEFT_ALT L  &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X                 &kp C                        &kp V                    &kp B                                 &kp N                    &kp M                 &kp COMMA                    &kp DOT                  &kp FSLH  &kp ESC
-                                         &kp LGUI                     &mo 1                    &shift_num_layer_when_held 0 SPACE    &enter_or_mouse 4 ENTER  &mo 2                 &kp LEFT_ALT
+&kp TAB     &kp Q  &kp W                          &kp E                                 &kp R                             &kp T                                 &kp Y                    &kp U                          &kp I                                 &kp O                             &kp P     &kp BSPC
+&kp LSHIFT  &kp A  &hold_or_tap_home_row LCTRL S  &hold_or_tap_home_row LEFT_COMMAND D  &hold_or_tap_home_row LEFT_ALT F  &kp G                                 &kp H                    &hold_or_tap_home_row LCTRL J  &hold_or_tap_home_row LEFT_COMMAND K  &hold_or_tap_home_row LEFT_ALT L  &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z  &kp X                          &kp C                                 &kp V                             &kp B                                 &kp N                    &kp M                          &kp COMMA                             &kp DOT                           &kp FSLH  &kp ESC
+                                                  &kp LGUI                              &mo 1                             &shift_num_layer_when_held 0 SPACE    &enter_or_mouse 4 ENTER  &mo 2                          &kp LEFT_ALT
             >;
         };
 
