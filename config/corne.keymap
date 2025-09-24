@@ -152,10 +152,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&auto_shift LS(GRAVE) GRAVE  &auto_shift LS(N1) N1  &autoshift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5       &auto_shift LS(N6) N6    &auto_shift LS(N7) N7    &auto_shift LS(N8) N8  &auto_shift LS(N9) N9     &auto_shift LS(N0) N0  &kp BSPC
-&trans     &trans                       &trans  &trans  &trans  &trans       &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &kp LSHIFT
-&trans     &trans                       &trans  &trans  &trans  &trans       &trans    &trans    &trans  &trans     &trans  &trans
-                                                &trans  &trans  &kp SPACE    &kp RET   &trans    &trans
+&auto_shift LS(GRAVE) GRAVE  &auto_shift LS(N1) N1  &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5    &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8  &auto_shift LS(N9) N9  &auto_shift LS(N0) N0  &kp BSPC
+&trans                       &trans                 &trans                 &trans                 &trans                 &trans                   &kp LEFT               &kp DOWN               &kp UP                 &kp RIGHT              &trans                 &kp LSHIFT
+&trans                       &trans                 &trans                 &trans                 &trans                 &trans                   &trans                 &trans                 &trans                 &trans                 &trans                 &trans
+                                                                           &trans                 &trans                 &kp SPACE                &kp RET                &trans                 &trans
             >;
         };
 
