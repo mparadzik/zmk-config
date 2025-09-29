@@ -137,14 +137,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W                   &kp E                          &kp R                      &kp T        &kp Y                    &kp U                    &kp I                           &kp O                       &kp P     &kp BSPC
-&kp LSHIFT  &kp A  &home_row_left LCTRL S  &home_row_left LEFT_COMMAND D  &home_row_left LEFT_ALT F  &kp G        &kp H                    &home_row_right LCTRL J  &home_row_right LEFT_COMMAND K  &home_row_right LEFT_ALT L  &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X                   &kp C                          &kp V                      &kp B        &kp N                    &kp M                    &kp COMMA                       &kp DOT                     &kp FSLH  &kp ESC
-                                           &kp LC(LA(LGUI))               &mo 1                      &kp SPACE    &enter_or_mouse 4 ENTER  &mo 2                    &kp LC(A)
+&kp TAB     &kp Q  &kp W                      &kp E                          &kp R                   &kp T                      &kp Y                    &kp U                    &kp I                           &kp O                       &kp P                             &kp BSPC
+&kp LSHIFT  &kp A  &home_row_left LEFT_ALT S  &home_row_left LEFT_COMMAND D  &home_row_left LCTRL F  &kp G                      &kp H                    &home_row_right LCTRL J  &home_row_right LEFT_COMMAND K  &home_row_right LEFT_ALT L  &home_row_right SEMI RIGHT_SHIFT  &kp SQT
+&kp LCTRL   &kp Z  &kp X                      &kp C                          &kp V                   &kp B                      &kp N                    &kp M                    &kp COMMA                       &kp DOT                     &kp FSLH                          &kp ESC
+                                              &kp LC(LA(LGUI))               &mo 1                   &enter_or_mouse 4 SPACE    &enter_or_mouse 5 ENTER  &mo 2                    &kp LC(A)
             >;
         };
 
-        lower_layer {
+        nav {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -152,14 +152,14 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&auto_shift LS(GRAVE) GRAVE  &auto_shift LS(N1) N1  &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5    &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8  &auto_shift LS(N9) N9  &auto_shift LS(N0) N0  &kp BSPC
-&trans                       &trans                 &trans                 &trans                 &trans                 &trans                   &kp LEFT               &kp DOWN               &kp UP                 &kp RIGHT              &trans                 &kp LSHIFT
-&trans                       &trans                 &trans                 &trans                 &trans                 &trans                   &trans                 &trans                 &trans                 &trans                 &trans                 &trans
-                                                                           &trans                 &trans                 &kp SPACE                &kp RET                &trans                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans         &trans       &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans    &trans         &trans
             >;
         };
 
-        raise_layer {
+        symbol {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -167,28 +167,46 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans    &trans  &trans       &trans   &kp LEFT_PARENTHESIS  &kp EQUAL  &kp RIGHT_PARENTHESIS  &trans  &trans
-&trans  &trans  &trans  &trans    &trans  &trans       &trans   &kp LEFT_BRACKET      &kp MINUS  &kp RIGHT_BRACKET      &trans  &kp BACKSLASH
-&trans  &trans  &trans  &trans    &trans  &trans       &trans   &kp LEFT_BRACE        &trans     &kp RIGHT_BRACE        &trans  &trans
-                        &kp LGUI  &trans  &kp SPACE    &kp RET  &trans                &trans
+&trans  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS  &kp PIPE         &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR    &trans             &kp DELETE
+&trans  &kp EXCLAMATION  &kp SLASH      &kp UNDERSCORE    &kp EQUAL  &kp AMPERSAND    &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK  &kp DOUBLE_QUOTES  &kp BACKSLASH
+&trans  &kp TILDE        &kp PLUS       &trans            &trans     &kp PERCENT      &kp AT_SIGN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON     &kp SINGLE_QUOTE   &trans
+                                        &trans            &trans     &kp SPACE        &kp RET      &trans                &trans
             >;
         };
 
-        layer_3 {
+        function {
             bindings = <
-&trans      &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)    &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(NUMBER_0)  &trans
-&kp F1      &kp F2            &kp F3            &kp F4            &kp F5            &kp F6              &kp F7            &kp F8      &kp F9      &kp F10     &kp F11           &kp F12
-&bt BT_CLR  &bt BT_PRV        &bt BT_NXT        &trans            &trans            &trans              &trans            &trans      &trans      &trans      &trans            &studio_unlock
-                                                &trans            &trans            &trans              &trans            &trans      &trans
+&trans      &kp F1      &kp F2      &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans      &trans      &trans      &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &kp F12
+&bt BT_CLR  &bt BT_PRV  &bt BT_NXT  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &studio_unlock
+                                    &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
-        layer_4 {
+        num {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+                        &trans  &trans  &trans    &trans  &kp N0  &trans
+            >;
+        };
+
+        mouse {
             bindings = <
 &trans  &mkp MB4        &mmv MOVE_UP    &mkp MB5         &trans     &trans       &trans          &trans          &trans        &trans           &trans  &trans
 &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &trans       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
 &trans  &trans          &trans          &trans           &trans     &trans       &mkp LCLK       &mkp MCLK       &mkp RCLK     &none            &trans  &trans
                                         &mkp LCLK        &mkp MCLK  &mkp RCLK    &none           &none           &none
+            >;
+        };
+
+        nav_num_backup {
+            bindings = <
+&auto_shift LS(GRAVE) GRAVE  &auto_shift LS(N1) N1  &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5    &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8  &auto_shift LS(N9) N9  &auto_shift LS(N0) N0  &kp BSPC
+&trans                       &trans                 &trans                 &trans                 &trans                 &trans                   &kp LEFT               &kp DOWN               &kp UP                 &kp RIGHT              &trans                 &kp LSHIFT
+&trans                       &trans                 &trans                 &trans                 &trans                 &trans                   &trans                 &trans                 &trans                 &trans                 &trans                 &trans
+                                                                           &trans                 &trans                 &kp SPACE                &kp RET                &trans                 &trans
             >;
         };
     };
