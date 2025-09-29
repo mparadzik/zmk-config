@@ -23,7 +23,7 @@ layers:
   - {t: J, h: LCTRL}
   - {t: K, h: LEFT COMMAND}
   - {t: L, h: LEFT ALT}
-  - {t: RIGHT SHIFT, h: ;}
+  - {t: ;, h: RIGHT SHIFT}
   - ''''
   - LCTRL
   - Z
