@@ -17,6 +17,11 @@
             bindings = <&mo 3>;
             key-positions = <37 40>;
         };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <19 20>;
+        };
     };
 
     macros {
