@@ -162,10 +162,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans         &trans       &trans     &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans         &trans
+&trans  &trans  &mkp MB4        &mmv MOVE_UP    &mkp MB5         &trans    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans           &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT  &trans           &trans
+&trans  &trans  &trans          &trans          &trans           &trans    &msc SCRL_LEFT  &mkp LCLK       &mkp MCLK     &mkp RCLK  &msc SCRL_RIGHT  &trans
+                                &trans          &trans           &trans    &trans          &msc SCRL_DOWN  &msc SCRL_UP
             >;
         };
 
